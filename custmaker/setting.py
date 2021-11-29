@@ -1,10 +1,9 @@
 import os.path
 import yaml
-from sqlalchemy import create_engine, text, MetaData, Table, Column, Integer,
-String
+from sqlalchemy import create_engine, text, MetaData, Table, Column, Integer, String
 
 
-def connect_db_engine(config_path):
+def create_db_engine(config_path):
     config_path = os.path.expanduser(config_path)
 
     with open(config_path) as f:

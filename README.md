@@ -38,10 +38,10 @@ ex) sex ratio data
 Create database engine using the DB config file.
 
 ```python
-from custmaker.setting import connect_db_engine
+from custmaker.setting import create_db_engine
 
-# connect_db(DB config file path)
-engine = connect_db('~\\.sqlalchemy\\config.yaml')
+# create_db_engine(DB config file path)
+engine = create_db_engine('~\\.sqlalchemy\\config.yaml')
 ```
 
 ### 2. Create customer table
