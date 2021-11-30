@@ -79,3 +79,4 @@ show_compare_plot(engine)
 - SQLAlchemy
 - numpy
 - pandas
+- plotly
