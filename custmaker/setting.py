@@ -1,6 +1,7 @@
 import os.path
 import yaml
-from sqlalchemy import create_engine, text, MetaData, Table, Column, Integer, String
+from sqlalchemy import create_engine, text, MetaData, Table, Column, Integer,\
+    String
 
 
 def create_db_engine(config_path):

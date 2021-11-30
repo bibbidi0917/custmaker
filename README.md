@@ -23,7 +23,7 @@ port: port
 db_name: db_name
 ```
 
-#### b) population ratio data
+#### b) population ratio data (reference distribution)
 In your local database, you should have firstname, lastname, age, sex ratio data.
 
 ex) sex ratio data
@@ -63,7 +63,16 @@ from custmaker.making import create_customer
 # create_customer(join_date, # of customer, db_engine_name)
 create_customer('20211129', 10, engine)
 ```
+### 4. Compare reference and actual distribution
 
+Compare the distribution of the reference data with the data you actually created.
+
+```python
+from custmaker.comparing import show_compare_plot
+
+# show_compare_plot(db_engine_name)
+show_compare_plot(engine)
+```
 
 ## Dependencies
 - PyYAML
