@@ -67,9 +67,9 @@ def _draw_name_compare_plot(conn, customer_df):
     customer_lastname_df = customer_df.groupby('lastname').size().reset_index()
     customer_lastname_df.columns = ['lastname', 'count']
     customer_lastname_df.sort_values(by='count', ascending=False, inplace=True)
-    customer_lastname_df['ratio'] = (
+    customer_lastname_df['ratio'] = round((
         customer_lastname_df['count'] / customer_lastname_df['count'].sum()
-    )*100
+    )*100, 2)
     customer_lastname_df = customer_lastname_df.head(10)
 
     customer_firstname_df = customer_df.groupby('firstname').size().\
@@ -78,9 +78,9 @@ def _draw_name_compare_plot(conn, customer_df):
     customer_firstname_df.sort_values(
         by='count', ascending=False, inplace=True
     )
-    customer_firstname_df['ratio'] = (
+    customer_firstname_df['ratio'] = round((
         customer_firstname_df['count'] / customer_firstname_df['count'].sum()
-    )*100
+    )*100, 2)
     customer_firstname_df = customer_firstname_df.head(10)
 
     fig = make_subplots(
@@ -143,9 +143,9 @@ def _draw_age_compare_plot(conn, customer_df):
     customer_age_df.columns = ['age']
     customer_age_df = customer_age_df.groupby('age').size().reset_index()
     customer_age_df.columns = ['age', 'count']
-    customer_age_df['ratio'] = (
+    customer_age_df['ratio'] = round((
         customer_age_df['count'] / customer_age_df['count'].sum()
-    )*100
+    )*100, 2)
     customer_age_df['age'] = customer_age_df['age'].astype(str) + ' years'
 
     fig = make_subplots(
