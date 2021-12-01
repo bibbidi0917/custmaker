@@ -2,7 +2,7 @@
 
 ## How to install
 ```bash
-pip install custmaker
+pip install git+https://github.com/bibbidi0917/custmaker.git
 ```
 
 ## How to use
