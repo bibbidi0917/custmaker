@@ -5,12 +5,12 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 install_requires = [
-    'PyYAML', 'SQLAlchemy', 'numpy', 'pandas', 'plotly'
+    'PyYAML', 'SQLAlchemy', 'numpy', 'pandas', 'plotly', 'dash'
 ]
 
 setup(
     name="custmaker",
-    version="1.0.1.1",
+    version="1.0.2.0",
     author="Jihyun Kim",
     author_email="bibbidi0917@naver.com",
     description="create customer data in local database",

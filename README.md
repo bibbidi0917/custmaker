@@ -74,9 +74,12 @@ from custmaker.comparing import show_compare_plot
 show_compare_plot(engine)
 ```
 
+Run the above codes, and connect to 'http://127.0.0.1:8050/'.
+
 ## Dependencies
 - PyYAML
 - SQLAlchemy
 - numpy
 - pandas
 - plotly
+- dash
